@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import React from 'react'
+import Logo from './components/Logo';
+import Arrow from './components/Arrow';
+import { Button } from 'react-bootstrap';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <main>
+      <header className='header-container'>
+        <Logo />
+        <nav className='menu-container'>
+          <a>What we offer</a>
+          <a>How it works</a>
+          <a>Portfolio</a>
+        </nav>
+        <Button className='btn-purple'>
+          Contact us
+        </Button>
       </header>
-    </div>
+    </main>
   );
-}
+};
+
+
 
 export default App;
